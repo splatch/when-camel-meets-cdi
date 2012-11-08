@@ -95,4 +95,26 @@
         </dependencies>
     </dependencyManagement>
 
+    <profiles>
+        <profile>
+            <id>tomee</id>
+
+		    <dependencyManagement>
+		        <dependencies>
+		            <dependency>
+		                <groupId>org.apache.camel</groupId>
+		                <artifactId>camel-core</artifactId>
+		                <version>${camel.version}</version>
+		                <exclusions>
+		                    <exclusion>
+		                        <groupId>org.slf4j</groupId>
+		                        <artifactId>slf4j-api</artifactId>
+		                    </exclusion>
+		                </exclusions>
+		            </dependency>
+	            </dependencies>
+            </dependencyManagement>
+        </profile>
+    </profiles>
+
 </project>
